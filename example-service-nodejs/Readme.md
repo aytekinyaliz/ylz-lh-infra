@@ -23,3 +23,12 @@ docker push acrexampleproject.azurecr.io/example-service:1
 ```
 kubectl apply -f kube-manifests -R
 ```
+
+* Test to service
+
+```
+http://<ProjectName>.<Location>.cloudapp.azure.com/nodejs
+
+http://exampleproject.westeurope.cloudapp.azure.com/nodejs
+
+```

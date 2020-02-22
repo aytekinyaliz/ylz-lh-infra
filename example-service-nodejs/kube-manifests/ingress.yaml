@@ -11,7 +11,7 @@ spec:
     - host:
       http:
         paths:
-          - path: /example-service*
+          - path: /nodejs*
             backend:
               serviceName: example-service
               servicePort: 80
