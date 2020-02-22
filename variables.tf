@@ -1,3 +1,8 @@
+variable "project_name" {
+  description = "Project name."
+  default = "exampleproject"
+}
+
 variable "azure_subscription_id" {
   description = "Azure substitution id."
 }
@@ -23,15 +28,40 @@ variable "env" {
 }
 
 variable "resource_group_name_k8s" {
-  description = "Name of the resource group."
-  default     = "rg-k8s-exampleproject"
+  description = "Name of the k8s resource group."
+  default     = "rg-k8s"
 }
 
-variable "k8s_resource_group_name_net" {
-  description = "Name of the resource group."
-  default     = "rg-net-exampleproject"
+variable "resource_group_name_net" {
+  description = "Name of the network resource group."
+  default     = "rg-net"
 }
 
+variable "resource_group_name_global" {
+  description = "Name of the global resource group."
+  default     = "rg-global"
+}
+
+variable "acr_name" {
+  description = "Name of the azure container registry."
+  default     = "acr"
+}
+
+variable "acr_sku" {
+  description = "sku of the azure container registry."
+  default     = "Premium"
+}
+
+variable "acr_admin_enabled" {
+  description = "admin status of the azure container registry."
+  default     = false
+}
+
+variable "acr_georeplication_locations" {
+  type    = list(string)
+
+  default = ["westeurope", "westus"]
+}
 
 variable "location" {
   description = "Location of the cluster."
@@ -98,7 +128,7 @@ variable "aks_agent_count" {
 
 variable "aks_agent_vm_size" {
   description = "The size of the Virtual Machine."
-  default     = "Standard_D3_v2"
+  default     = "Standard_D12_v2"
 }
 
 variable "kubernetes_version" {
@@ -142,4 +172,16 @@ variable "tags" {
   default = {
     source = "terraform"
   }
+}
+
+variable "key_vault_name" {
+  default = "key-vault"
+}
+
+variable "key_vault_enabled_for_disk_encryption" {
+  default = true
+}
+
+variable "key_vault_sku_name" {
+  default = "standard"
 }

@@ -1,7 +1,7 @@
 resource "azurerm_virtual_network" "vnet" {
   name                = format("%s-%s", var.virtual_network_name, var.location)
-  location            = azurerm_resource_group.rg-k8s.location
-  resource_group_name = azurerm_resource_group.rg-k8s.name
+  location            = azurerm_resource_group.rg-net.location
+  resource_group_name = azurerm_resource_group.rg-net.name
   address_space       = [var.virtual_network_address_prefix]
 
   subnet {
@@ -15,34 +15,35 @@ resource "azurerm_virtual_network" "vnet" {
   }
 
   tags       = var.tags
-  depends_on = [azurerm_resource_group.rg-k8s]
+  depends_on = [azurerm_resource_group.rg-net]
 }
 
 data "azurerm_subnet" "kubesubnet" {
   name                 = var.aks_subnet_name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  resource_group_name  = azurerm_resource_group.rg-k8s.name
+  resource_group_name  = azurerm_resource_group.rg-net.name
 
-  depends_on = [azurerm_resource_group.rg-k8s]
+  depends_on = [azurerm_resource_group.rg-net]
 }
 
 data "azurerm_subnet" "appgwsubnet" {
   name                 = "appgwsubnet"
   virtual_network_name = azurerm_virtual_network.vnet.name
-  resource_group_name  = azurerm_resource_group.rg-k8s.name
+  resource_group_name  = azurerm_resource_group.rg-net.name
 
-  depends_on = [azurerm_resource_group.rg-k8s]
+  depends_on = [azurerm_resource_group.rg-net]
 }
 
 # Public Ip
 resource "azurerm_public_ip" "public-ip" {
-  name                = format("public-ip-%s", azurerm_resource_group.rg-k8s.location)
-  location            = azurerm_resource_group.rg-k8s.location
-  resource_group_name = azurerm_resource_group.rg-k8s.name
+  name                = format("public-ip-%s", azurerm_resource_group.rg-net.location)
+  location            = azurerm_resource_group.rg-net.location
+  resource_group_name = azurerm_resource_group.rg-net.name
   allocation_method   = "Static"
   sku                 = "Standard"
+  domain_name_label   = var.project_name
 
   tags = var.tags
 
-  depends_on = [azurerm_resource_group.rg-k8s]
+  depends_on = [azurerm_resource_group.rg-net]
 }

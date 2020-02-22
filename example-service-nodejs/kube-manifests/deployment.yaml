@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-service
+  labels:
+    app: example-service
+spec:
+  containers:
+  - image: acrexampleproject.azurecr.io/example-service:1
+    name: example-service
+    ports:
+    - containerPort: 80
+      protocol: TCP
