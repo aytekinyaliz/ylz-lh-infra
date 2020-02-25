@@ -1,6 +1,6 @@
 variable "project_name" {
   description = "Project name."
-  default = "exampleproject"
+  default = "ylz-lh"
 }
 
 variable "azure_subscription_id" {

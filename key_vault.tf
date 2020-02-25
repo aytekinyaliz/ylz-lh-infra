@@ -1,4 +1,4 @@
-resource "azurerm_key_vault" "key_vault_exampleproject" {
+resource "azurerm_key_vault" "key_vault_ylz-lh" {
   name                        = format("%s-%s", var.key_vault_name, var.project_name)
   location                    = azurerm_resource_group.rg-global.location
   resource_group_name         = azurerm_resource_group.rg-global.name

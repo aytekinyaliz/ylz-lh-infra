@@ -37,7 +37,7 @@ $ az ad sp list --display-name <displayName>
 
     ```
 
-    $ terraform init -backend-config="storage_account_name=<YourAzureStorageAccountName>" -backend-config="container_name=tfstate" -backend-config="access_key=<YourStorageAccountAccessKey>" -backend-config="key=exampleproject.terraform.tfstate"
+    $ terraform init -backend-config="storage_account_name=<YourAzureStorageAccountName>" -backend-config="container_name=tfstate" -backend-config="access_key=<YourStorageAccountAccessKey>" -backend-config="key=ylzlh.terraform.tfstate"
 
     ```
 

@@ -6,7 +6,7 @@ metadata:
     app: example-service
 spec:
   containers:
-  - image: acrexampleproject.azurecr.io/example-service:1
+  - image: acrylzlh.azurecr.io/example-service:1
     name: example-service
     ports:
     - containerPort: 3000

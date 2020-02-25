@@ -2,20 +2,20 @@
 
 * Login to Azure Container Registry
 ```
-az acr login -n acrexampleproject
+az acr login -n acrylzlh
 
 ```
 
 * Build docker image
 
 ```
-docker build -t acrexampleproject.azurecr.io/example-service:1 .
+docker build -t acrylzlh.azurecr.io/example-service:1 .
 
 ```
 * Push docker image
 
 ```
-docker push acrexampleproject.azurecr.io/example-service:1
+docker push acrylzlh.azurecr.io/example-service:1
 ```
 
 * Apply the YAML file:
@@ -29,6 +29,6 @@ kubectl apply -f kube-manifests -R
 ```
 http://<ProjectName>.<Location>.cloudapp.azure.com/nodejs
 
-http://exampleproject.westeurope.cloudapp.azure.com/nodejs
+http://ylz-lh.westeurope.cloudapp.azure.com/nodejs
 
 ```

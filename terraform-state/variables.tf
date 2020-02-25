@@ -23,11 +23,11 @@ variable "location" {
 }
 variable "resource_group_name_storage" {
   description = "Name of the resource group for storage."
-  default     = "rg-st-exampleproject"
+  default     = "rg-st-ylz-lh"
 }
 
 variable "st_acc_name" {
-  default = "sttrexampleproject"
+  default = "sttrylz-lh"
 }
 variable "storage_container_name" {
   default = "tfstate"

@@ -27,9 +27,9 @@ output "host" {
 }
 
 output "identity_resource_id" {
-  value = azurerm_user_assigned_identity.identity-exampleproject.id
+  value = azurerm_user_assigned_identity.identity-ylz-lh.id
 }
 
 output "identity_client_id" {
-  value = azurerm_user_assigned_identity.identity-exampleproject.client_id
+  value = azurerm_user_assigned_identity.identity-ylz-lh.client_id
 }

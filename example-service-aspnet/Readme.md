@@ -13,6 +13,6 @@ kubectl apply -f aspnetapp.yaml
 ```
 http://<ProjectName>.<Location>.cloudapp.azure.com/aspnetapp
 
-http://exampleproject.westeurope.cloudapp.azure.com/aspnetapp
+http://ylz-lh.westeurope.cloudapp.azure.com/aspnetapp
 
 ```
