@@ -27,7 +27,7 @@ variable "resource_group_name_storage" {
 }
 
 variable "st_acc_name" {
-  default = "sttrylz-lh"
+  default = "sttrylzlh"
 }
 variable "storage_container_name" {
   default = "tfstate"
