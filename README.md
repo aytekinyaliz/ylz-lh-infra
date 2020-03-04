@@ -1,3 +1,8 @@
+# YLZ-LH-INFRA
+
+![High-Level Design](./_images/High-Level_Design.png)
+
+
 ## Create an Application Gateway ingress controller and Kubernetes Service in Azure
 
 ![infra diagram](./images/High-Level Design.jpg)
