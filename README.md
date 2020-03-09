@@ -1,9 +1,5 @@
 # YLZ-LH-INFRA
 
-<div class="iframe_container">
-  <iframe src="http://www.youtube.com/embed/E-ONNjFoOx0" frameborder="0" allowfullscreen="allowfullscreen"> </iframe>
-</div>
-
 ![High-Level Design](./_images/High-Level_Design.png)
 
 ## Create an Application Gateway ingress controller and Kubernetes Service in Azure
